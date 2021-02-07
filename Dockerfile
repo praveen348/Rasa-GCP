@@ -4,7 +4,7 @@ ENV BOT_ENV=production
 
 COPY . /var/www
 WORKDIR /var/www
-
+RUN pip install --upgrade pip
 RUN pip install rasa==2.0
 RUN rasa train
 
